@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cheese Omelette</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #fffde7, #fff9c4);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .heading {
+      color: #f57c00;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section { display: none; }
+    .active-section { display: block; }
+    .nutrition-box {
+      background-color: #fff3e0;
+      border-left: 5px solid #ff6f00;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .footer {
+      background-color: #f57c00;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="container py-5">
+
+  <h2 class="heading text-center">Cheese Omelette</h2>
+
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-warning btn-custom me-2" onclick="showSection('ingredients')">Show Ingredients</button>
+    <button class="btn btn-outline-primary btn-custom me-2" onclick="showSection('nutrition')">Show Nutrition</button>
+  </div>
+
+  <div id="ingredients" class="section active-section">
+    <h4 class="text-warning">Ingredients</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">2 eggs</li>
+      <li class="list-group-item">1/4 cup grated cheddar or mozzarella cheese</li>
+      <li class="list-group-item">1 tbsp milk (optional, for fluffiness)</li>
+      <li class="list-group-item">Salt and pepper to taste</li>
+      <li class="list-group-item">1 tbsp butter or oil</li>
+      <li class="list-group-item">Optional: chopped onions, tomatoes, green chilies</li>
+    </ul>
+  </div>
+
+  <div id="nutrition" class="section">
+    <h4 class="text-primary">Nutrition Facts (per omelette)</h4>
+    <div class="nutrition-box">
+      <p><strong>Calories:</strong> 220 kcal</p>
+      <p><strong>Fat:</strong> 18g</p>
+      <p><strong>Carbohydrates:</strong> 1.5g</p>
+      <p><strong>Protein:</strong> 12g</p>
+      <p><strong>Cholesterol:</strong> 180mg</p>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-success">Cooking Method</h4>
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr><td><strong>Step 1</strong></td><td>Crack the eggs into a bowl, add salt, pepper, and milk. Beat well.</td></tr>
+        <tr><td><strong>Step 2</strong></td><td>Heat butter in a non-stick pan over medium heat.</td></tr>
+        <tr><td><strong>Step 3</strong></td><td>Pour the egg mixture into the pan and let it cook without stirring.</td></tr>
+        <tr><td><strong>Step 4</strong></td><td>Sprinkle cheese evenly on the semi-cooked omelette.</td></tr>
+        <tr><td><strong>Step 5</strong></td><td>Once the bottom is firm, fold the omelette in half and cook for another minute.</td></tr>
+        <tr><td><strong>Step 6</strong></td><td>Slide onto a plate and serve hot with toast or salad.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-5 text-center">
+    <h4 class="text-info">Watch the Recipe</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8ImWgzQd3Po" title="Cheese Omelette Recipe" allowfullscreen></iframe>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-danger">Frequently Asked Questions</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+            Can I use other types of cheese?
+          </button>
+        </h2>
+        <div id="answer1" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, you can use any melting cheese like gouda, parmesan, or processed cheese.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+            How do I make it fluffier?
+          </button>
+        </h2>
+        <div id="answer2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Adding 1 tbsp milk or cream while beating eggs makes the omelette fluffier.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 PinkArt Recipes. All rights reserved. | Designed with ❤️ by Fathima Hafeesha</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('ingredients').classList.remove('active-section');
+      document.getElementById('nutrition').classList.remove('active-section');
+      document.getElementById(id).classList.add('active-section');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

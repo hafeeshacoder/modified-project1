@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chicken Curry Recipe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #fff3e0, #ffebcd);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .heading {
+      color: #b71c1c;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section { display: none; }
+    .active-section { display: block; }
+    .nutrition-box {
+      background-color: #ffe0b2;
+      border-left: 5px solid #d84315;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .footer {
+      background-color: #b71c1c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="container py-5">
+
+  <h2 class="heading text-center">Chicken Curry</h2>
+
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-danger btn-custom me-2" onclick="showSection('ingredients')">Show Ingredients</button>
+    <button class="btn btn-outline-primary btn-custom me-2" onclick="showSection('nutrition')">Show Nutrition</button>
+  </div>
+
+  <div id="ingredients" class="section active-section">
+    <h4 class="text-danger">Ingredients</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">500g chicken (bone-in or boneless), cut into pieces</li>
+      <li class="list-group-item">2 onions, finely chopped</li>
+      <li class="list-group-item">2 tomatoes, chopped</li>
+      <li class="list-group-item">1/2 cup yogurt</li>
+      <li class="list-group-item">2 tbsp oil or ghee</li>
+      <li class="list-group-item">1 tbsp ginger-garlic paste</li>
+      <li class="list-group-item">2 green chilies, slit</li>
+      <li class="list-group-item">1/2 tsp turmeric powder</li>
+      <li class="list-group-item">1 tsp red chili powder</li>
+      <li class="list-group-item">1 tsp coriander powder</li>
+      <li class="list-group-item">1/2 tsp cumin powder</li>
+      <li class="list-group-item">1 tsp garam masala</li>
+      <li class="list-group-item">Salt to taste</li>
+      <li class="list-group-item">Fresh coriander leaves for garnish</li>
+    </ul>
+  </div>
+
+  <div id="nutrition" class="section">
+    <h4 class="text-primary">Nutrition Facts (approximate per serving)</h4>
+    <div class="nutrition-box">
+      <p><strong>Calories:</strong> 390 kcal</p>
+      <p><strong>Fat:</strong> 25g</p>
+      <p><strong>Carbohydrates:</strong> 10g</p>
+      <p><strong>Protein:</strong> 30g</p>
+      <p><strong>Sodium:</strong> 550mg</p>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-warning">Cooking Method</h4>
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr><td><strong>Step 1</strong></td><td>Heat oil in a pan and sauté onions until golden brown.</td></tr>
+        <tr><td><strong>Step 2</strong></td><td>Add ginger-garlic paste and green chilies. Sauté for a minute.</td></tr>
+        <tr><td><strong>Step 3</strong></td><td>Add chopped tomatoes and cook until soft.</td></tr>
+        <tr><td><strong>Step 4</strong></td><td>Add turmeric, chili powder, coriander, cumin, and salt. Mix well.</td></tr>
+        <tr><td><strong>Step 5</strong></td><td>Stir in yogurt and cook until the oil starts to separate.</td></tr>
+        <tr><td><strong>Step 6</strong></td><td>Add chicken pieces and mix until well coated with masala.</td></tr>
+        <tr><td><strong>Step 7</strong></td><td>Cover and cook on low heat for 20–25 minutes until chicken is tender.</td></tr>
+        <tr><td><strong>Step 8</strong></td><td>Sprinkle garam masala, garnish with coriander, and serve hot with rice or roti.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-5 text-center">
+    <h4 class="text-success">Watch the Recipe</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UJ-rJGyTPfU" title="Chicken Curry Recipe" allowfullscreen></iframe>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-info">Frequently Asked Questions</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+            Can I use boneless chicken?
+          </button>
+        </h2>
+        <div id="answer1" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, boneless chicken cooks faster and works well. Bone-in gives richer flavor.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+            Can I make it in a pressure cooker?
+          </button>
+        </h2>
+        <div id="answer2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, cook for 2 whistles and let the pressure release naturally.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 PinkArt Recipes. All rights reserved. | Designed with ❤️ by Fathima Hafeesha</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('ingredients').classList.remove('active-section');
+      document.getElementById('nutrition').classList.remove('active-section');
+      document.getElementById(id).classList.add('active-section');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

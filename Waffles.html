@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Belgian Waffles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fff0f5, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 960px;
+    }
+    .heading {
+      color: #c2185b;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section {
+      display: none;
+    }
+    .active-section {
+      display: block;
+    }
+    .nutrition-box {
+      background-color: #fce4ec;
+      border-left: 5px solid #ad1457;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      background-color: #c2185b;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    .accordion-button {
+      background-color: #f8bbd0;
+      color: #880e4f;
+    }
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="heading text-center">Belgian Waffles</h2>
+
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-primary btn-custom me-2" onclick="showSection('ingredients')">Show Ingredients</button>
+      <button class="btn btn-outline-success btn-custom me-2" onclick="showSection('nutrition')">Show Nutrition</button>
+    </div>
+
+    <div id="ingredients" class="section active-section">
+      <h4 class="text-primary">Ingredients</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">2 cups all-purpose flour</li>
+        <li class="list-group-item">2 tablespoons sugar</li>
+        <li class="list-group-item">1 tablespoon baking powder</li>
+        <li class="list-group-item">1/2 teaspoon salt</li>
+        <li class="list-group-item">1 3/4 cups milk</li>
+        <li class="list-group-item">2 eggs</li>
+        <li class="list-group-item">1/2 cup melted butter</li>
+        <li class="list-group-item">1 teaspoon vanilla extract</li>
+      </ul>
+    </div>
+
+    <div id="nutrition" class="section">
+      <h4 class="text-success">Nutrition Facts</h4>
+      <div class="nutrition-box">
+        <p><strong>Calories:</strong> 350 kcal per waffle</p>
+        <p><strong>Fat:</strong> 18g</p>
+        <p><strong>Carbohydrates:</strong> 38g</p>
+        <p><strong>Sugar:</strong> 5g</p>
+        <p><strong>Protein:</strong> 8g</p>
+        <p><strong>Sodium:</strong> 320mg</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h4 class="text-warning">Cooking Steps</h4>
+      <table class="table table-striped table-bordered">
+        <tbody>
+          <tr><td><strong>Step 1</strong></td><td>Preheat your waffle iron.</td></tr>
+          <tr><td><strong>Step 2</strong></td><td>In a bowl, mix flour, sugar, baking powder, and salt.</td></tr>
+          <tr><td><strong>Step 3</strong></td><td>In another bowl, whisk milk, eggs, butter, and vanilla.</td></tr>
+          <tr><td><strong>Step 4</strong></td><td>Combine wet and dry ingredients. Stir until smooth.</td></tr>
+          <tr><td><strong>Step 5</strong></td><td>Pour batter into preheated waffle iron and cook until golden.</td></tr>
+          <tr><td><strong>Step 6</strong></td><td>Serve warm with toppings like maple syrup, berries, or whipped cream.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-5 text-center">
+      <h4 class="text-danger">Watch the Recipe</h4>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/F5A0T4RT6IE" title="Belgian Waffles Recipe" allowfullscreen></iframe>
+    </div>
+
+    <div class="mt-5">
+      <h4 class="text-info">Frequently Asked Questions</h4>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+              Can I freeze waffles?
+            </button>
+          </h2>
+          <div id="answer1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Yes! Let them cool completely, then freeze in a zip-lock bag. Toast to reheat.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+              Can I use pancake mix instead?
+            </button>
+          </h2>
+          <div id="answer2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Yes, but waffles made from scratch are crispier and richer in flavor.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">
+              What toppings go best with waffles?
+            </button>
+          </h2>
+          <div id="answer3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Maple syrup, honey, Nutella, fresh fruits, whipped cream, or chocolate sauce are delicious options.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 PinkArt Recipes. All rights reserved. | Designed with ❤️ by Fathima Hafeesha</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('ingredients').classList.remove('active-section');
+      document.getElementById('nutrition').classList.remove('active-section');
+      document.getElementById(id).classList.add('active-section');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

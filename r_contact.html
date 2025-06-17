@@ -1,0 +1,133 @@
+<!-- Include this in your <head> -->
+<style>
+  .about-section {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeSlideIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .about-section:hover {
+    transform: translateY(-5px);
+  }
+
+  .about-section h2 {
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1s ease-out;
+  }
+
+  .about-section p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    animation: fadeIn 1.2s ease-in-out;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-section ul {
+    list-style: none;
+    padding-left: 0;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .about-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    color: #333;
+    animation: slideInList 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .about-section ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0d6efd;
+    font-weight: bold;
+  }
+
+  /* Animation Keyframes */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInList {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Staggered list animation */
+  .about-section ul li:nth-child(1) { animation-delay: 0.2s; }
+  .about-section ul li:nth-child(2) { animation-delay: 0.4s; }
+  .about-section ul li:nth-child(3) { animation-delay: 0.6s; }
+  .about-section ul li:nth-child(4) { animation-delay: 0.8s; }
+  .about-section ul li:nth-child(5) { animation-delay: 1s; }
+</style>
+
+<!-- HTML Content -->
+<div class="container mt-4">
+  <div class="about-section">
+    <h2>About Railway Gate Tracker</h2>
+    <p>
+      The Railway Gate Tracker is a smart web platform designed to monitor and share the real-time status of railway crossing gates in your area. Whether you’re driving, biking, or walking, this tool helps you avoid frustrating delays and plan smoother routes.
+    </p>
+    <p>
+      The idea was born out of a simple goal — to enhance safety and convenience. Instead of getting stuck at closed gates or guessing the right time to cross, you now have accurate data at your fingertips.
+    </p>
+    <p>
+      We use live feeds and local data sources to ensure the tracker is updated every few minutes. Our responsive interface works seamlessly on mobile and desktop devices, providing an intuitive and reliable experience for every traveler.
+    </p>
+
+    <h4 class="mt-4 mb-3 text-primary">Key Features:</h4>
+    <ul>
+      <li>Live gate status (Open, Closed, or Closing Soon)</li>
+      <li>Next expected opening or closing time</li>
+      <li>Instant updates with refresh intervals</li>
+      <li>Clean, user-friendly interface</li>
+      <li>Future expansion: voice alerts, maps, and user reports</li>
+    </ul>
+
+    <p class="mt-3">
+      As we expand, we plan to add features like historical data, region filters, and voice-enabled notifications. Our mission is to make your travel not only faster but also safer.
+    </p>
+  </div>
+</div>

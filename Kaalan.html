@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaalan Recipe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #fffbe6, #ffe0b2);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .purple-heading {
+      color: #bf360c;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section { display: none; }
+    .active-section { display: block; }
+    .nutrition-box {
+      background-color: #fff3e0;
+      border-left: 5px solid #ef6c00;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .footer {
+      background-color: #bf360c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="container py-5">
+
+  <h2 class="purple-heading text-center">Kaalan</h2>
+
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-warning btn-custom me-2" onclick="showSection('ingredients')">Show Ingredients</button>
+    <button class="btn btn-outline-success btn-custom me-2" onclick="showSection('nutrition')">Show Nutrition</button>
+  </div>
+
+  <div id="ingredients" class="section active-section">
+    <h4 class="text-warning">Ingredients</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">400g raw banana (peeled and chopped)</li>
+      <li class="list-group-item">200g yam (peeled and chopped)</li>
+      <li class="list-group-item">1 cup thick yogurt</li>
+      <li class="list-group-item">1/4 cup grated coconut</li>
+      <li class="list-group-item">2 green chilies</li>
+      <li class="list-group-item">1 tsp turmeric powder</li>
+      <li class="list-group-item">1 tsp mustard seeds</li>
+      <li class="list-group-item">2 dried red chilies</li>
+      <li class="list-group-item">A few curry leaves</li>
+      <li class="list-group-item">Salt to taste</li>
+      <li class="list-group-item">2 tbsp coconut oil</li>
+    </ul>
+  </div>
+
+  <div id="nutrition" class="section">
+    <h4 class="text-success">Nutrition Facts (approximate per serving)</h4>
+    <div class="nutrition-box">
+      <p><strong>Calories:</strong> 180 kcal</p>
+      <p><strong>Fat:</strong> 9g</p>
+      <p><strong>Saturates:</strong> 7g</p>
+      <p><strong>Carbohydrates:</strong> 20g</p>
+      <p><strong>Protein:</strong> 3g</p>
+      <p><strong>Fiber:</strong> 5g</p>
+      <p><strong>Sodium:</strong> 350mg</p>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-danger">Cooking Method</h4>
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr><td><strong>Step 1</strong></td><td>Cook chopped raw banana and yam in salted water until soft. Drain and set aside.</td></tr>
+        <tr><td><strong>Step 2</strong></td><td>Grind grated coconut, green chilies, and a little water to a smooth paste.</td></tr>
+        <tr><td><strong>Step 3</strong></td><td>Whisk yogurt until smooth.</td></tr>
+        <tr><td><strong>Step 4</strong></td><td>Mix the cooked vegetables with the coconut paste, turmeric powder, salt, and yogurt in a pot.</td></tr>
+        <tr><td><strong>Step 5</strong></td><td>Cook on medium heat stirring gently until it thickens, but don’t let it boil too hard to avoid curdling.</td></tr>
+        <tr><td><strong>Step 6</strong></td><td>Heat coconut oil in a small pan, add mustard seeds, dried red chilies, and curry leaves. When mustard seeds splutter, pour this tempering over the kaalan.</td></tr>
+        <tr><td><strong>Step 7</strong></td><td>Mix gently and serve hot with rice.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-5 text-center">
+    <h4 class="text-primary">Watch the Recipe</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BxxR6GvWlqE" title="Kaalan Recipe" allowfullscreen></iframe>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-info">Frequently Asked Questions</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+            Can I use store-bought yogurt?
+          </button>
+        </h2>
+        <div id="answer1" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, but homemade yogurt is preferred for authentic taste.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+            How to prevent yogurt from curdling?
+          </button>
+        </h2>
+        <div id="answer2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Cook on low heat and stir continuously. Avoid boiling after adding yogurt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 PinkArt Recipes. All rights reserved. | Designed with ❤️ by Fathima Hafeesha</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('ingredients').classList.remove('active-section');
+      document.getElementById('nutrition').classList.remove('active-section');
+      document.getElementById(id).classList.add('active-section');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!-- Add this in the <head> section if not already present -->
+<style>
+  /* Styling for About Section */
+  .about-section {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeSlideIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .about-section:hover {
+    transform: translateY(-5px);
+  }
+
+  .about-section h2 {
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: slideRight 0.8s ease-in-out;
+  }
+
+  .about-section p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+    animation: slideLeft 1.2s ease-in-out;
+  }
+
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<!-- Updated About Section HTML -->
+<div class="container mt-4">
+  <div class="about-section">
+    <h2>About Railway Gate Tracker</h2>
+    <p>
+      The Railway Gate Tracker is a user-friendly platform designed to provide real-time updates on the opening and closing status of railway gates across cities and towns.
+      It aims to improve road safety by helping drivers, cyclists, and pedestrians plan their route in advance and avoid waiting near closed gates.
+    </p>
+    <p>
+      Whether you're commuting to work, transporting goods, or traveling with family, this tracker ensures a smooth journey by showing you the latest gate activity in your area.
+      Integrated with live data and regularly updated, the system provides accurate timing and status so you can travel smarter and safer.
+    </p>
+    <p>
+      Stay tuned as we expand our coverage to more regions and enhance features like voice alerts, gate history logs, and location-based notifications.
+    </p>
+  </div>
+</div>

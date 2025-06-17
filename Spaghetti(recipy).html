@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spaghetti alla Carbonara</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f0e6f7, #fff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .purple-heading {
+      color: #6a1b9a;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section {
+      display: none;
+    }
+    .active-section {
+      display: block;
+    }
+    .nutrition-box {
+      background-color: #fff3f6;
+      border-left: 5px solid #d81b60;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .footer {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    .accordion-button {
+      background-color: #f3e5f5;
+      color: #4a148c;
+    }
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="container py-5">
+
+  <h2 class="purple-heading text-center">Spaghetti alla Carbonara</h2>
+
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-primary btn-custom me-2" onclick="showSection('ingredients')">Show Ingredients</button>
+    <button class="btn btn-outline-success btn-custom me-2" onclick="showSection('nutrition')">Show Nutrition</button>
+  </div>
+
+  <div id="ingredients" class="section active-section">
+    <h4 class="text-primary">Ingredients</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">100g pancetta</li>
+      <li class="list-group-item">50g pecorino cheese</li>
+      <li class="list-group-item">50g parmesan</li>
+      <li class="list-group-item">3 large eggs</li>
+      <li class="list-group-item">350g spaghetti</li>
+      <li class="list-group-item">2 plump garlic cloves, peeled and left whole</li>
+      <li class="list-group-item">50g unsalted butter</li>
+      <li class="list-group-item">Sea salt and freshly ground black pepper</li>
+    </ul>
+  </div>
+
+  <div id="nutrition" class="section">
+    <h4 class="text-success">Nutrition Facts</h4>
+    <div class="nutrition-box">
+      <p><strong>Calories:</strong> 656 kcal</p>
+      <p><strong>Fat:</strong> 30.03g</p>
+      <p><strong>Saturates:</strong> 15g</p>
+      <p><strong>Carbohydrates:</strong> 66g</p>
+      <p><strong>Sugars:</strong> 4g (low)</p>
+      <p><strong>Fibre:</strong> 4g</p>
+      <p><strong>Protein:</strong> 29g</p>
+      <p><strong>Salt:</strong> 1.65g</p>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-warning">Cooking Method</h4>
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr><td><strong>Step 1</strong></td><td>Put a large saucepan of water on to boil.</td></tr>
+        <tr><td><strong>Step 2</strong></td><td>Finely chop the pancetta, remove rind. Grate cheeses and mix.</td></tr>
+        <tr><td><strong>Step 3</strong></td><td>Beat the eggs, season, and set aside.</td></tr>
+        <tr><td><strong>Step 4</strong></td><td>Add salt to boiling water and cook spaghetti until al dente.</td></tr>
+        <tr><td><strong>Step 5</strong></td><td>Squash garlic cloves to bruise.</td></tr>
+        <tr><td><strong>Step 6</strong></td><td>Melt butter and fry pancetta and garlic.</td></tr>
+        <tr><td><strong>Step 7</strong></td><td>Cook until pancetta is golden. Remove garlic.</td></tr>
+        <tr><td><strong>Step 8</strong></td><td>Add spaghetti to pancetta. Don’t drain water completely.</td></tr>
+        <tr><td><strong>Step 9</strong></td><td>Mix most cheese with eggs. Keep some cheese for garnish.</td></tr>
+        <tr><td><strong>Step 10</strong></td><td>Remove pan from heat, pour in egg-cheese mix, and toss.</td></tr>
+        <tr><td><strong>Step 11</strong></td><td>Add pasta water to keep it saucy. Season lightly.</td></tr>
+        <tr><td><strong>Step 12</strong></td><td>Twist onto plate, top with cheese and pepper. Serve hot.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-5 text-center">
+    <h4 class="text-danger">Watch the Recipe</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3AAdKl1UYZs" title="Spaghetti alla Carbonara" allowfullscreen></iframe>
+  </div>
+
+  <div class="mt-5">
+    <h4 class="text-info">Frequently Asked Questions</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+            Can you reheat carbonara?
+          </button>
+        </h2>
+        <div id="answer1" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, reheat gently with a splash of water either in a pan or over simmering water in a bowl.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+            What pasta is best for carbonara?
+          </button>
+        </h2>
+        <div id="answer2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Long pasta like bucatini, tagliatelle, or linguine holds the sauce best.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">
+            Can you use cream in carbonara?
+          </button>
+        </h2>
+        <div id="answer3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Traditional carbonara doesn’t use cream. Egg and cheese create the creamy sauce.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 PinkArt Recipes. All rights reserved. | Designed with ❤️ by Fathima Hafeesha</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('ingredients').classList.remove('active-section');
+      document.getElementById('nutrition').classList.remove('active-section');
+      document.getElementById(id).classList.add('active-section');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

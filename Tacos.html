@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classic Tacos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fffde7, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 960px;
+    }
+    .purple-heading {
+      color: #6a1b9a;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section {
+      display: none;
+    }
+    .active-section {
+      display: block;
+    }
+    .nutrition-box {
+      background-color: #fff3e0;
+      border-left: 5px solid #ff6f00;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .footer {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .btn-custom {
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    .accordion-button {
+      background-color: #ffe0b2;
+      color: #e65100;
+    }
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="purple-heading text-center">Classic Beef Tacos</h2>
+
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-primary btn-custom me-2" onclick="showSection('ingredients')">Show Ingredients</button>
+      <button class="btn btn-outline-success btn-custom me-2" onclick="showSection('nutrition')">Show Nutrition</button>
+    </div>
+
+    <div id="ingredients" class="section active-section">
+      <h4 class="text-primary">Ingredients</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">500g ground beef</li>
+        <li class="list-group-item">1 packet taco seasoning</li>
+        <li class="list-group-item">8 taco shells</li>
+        <li class="list-group-item">1 cup shredded lettuce</li>
+        <li class="list-group-item">1 cup diced tomatoes</li>
+        <li class="list-group-item">1/2 cup chopped onions</li>
+        <li class="list-group-item">1 cup shredded cheddar cheese</li>
+        <li class="list-group-item">Sour cream & salsa for topping</li>
+      </ul>
+    </div>
+
+    <div id="nutrition" class="section">
+      <h4 class="text-success">Nutrition Facts</h4>
+      <div class="nutrition-box">
+        <p><strong>Calories:</strong> 350 kcal per taco</p>
+        <p><strong>Fat:</strong> 20g</p>
+        <p><strong>Carbohydrates:</strong> 22g</p>
+        <p><strong>Protein:</strong> 18g</p>
+        <p><strong>Sodium:</strong> 680mg</p>
+        <p><strong>Fiber:</strong> 3g</p>
+        <p><strong>Sugar:</strong> 3g</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h4 class="text-warning">Cooking Method</h4>
+      <table class="table table-striped table-bordered">
+        <tbody>
+          <tr><td><strong>Step 1</strong></td><td>Cook ground beef in a skillet over medium heat.</td></tr>
+          <tr><td><strong>Step 2</strong></td><td>Drain excess fat and add taco seasoning with water.</td></tr>
+          <tr><td><strong>Step 3</strong></td><td>Simmer for 5-7 minutes until thickened.</td></tr>
+          <tr><td><strong>Step 4</strong></td><td>Warm taco shells in the oven or microwave.</td></tr>
+          <tr><td><strong>Step 5</strong></td><td>Fill tacos with beef, lettuce, tomatoes, onion, and cheese.</td></tr>
+          <tr><td><strong>Step 6</strong></td><td>Add salsa and sour cream as desired. Serve warm.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-5 text-center">
+      <h4 class="text-danger">Watch the Recipe</h4>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XprBj9NjwGI?si=TEJFvtjIIATREOEJ" title="How to Make Tacos" allowfullscreen></iframe>
+    </div>
+
+    <div class="mt-5">
+      <h4 class="text-info">Frequently Asked Questions</h4>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+              Can I make tacos with chicken or beans?
+            </button>
+          </h2>
+          <div id="answer1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Yes! You can use shredded chicken, black beans, or even tofu as a filling.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+              How do I keep taco shells from breaking?
+            </button>
+          </h2>
+          <div id="answer2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Warm them slightly in the oven before filling to make them more flexible.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">
+              Are tacos gluten-free?
+            </button>
+          </h2>
+          <div id="answer3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Corn taco shells are usually gluten-free, but always check the label to be sure.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 PinkArt Recipes. All rights reserved. | Designed with ❤️ by Fathima Hafeesha</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('ingredients').classList.remove('active-section');
+      document.getElementById('nutrition').classList.remove('active-section');
+      document.getElementById(id).classList.add('active-section');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
